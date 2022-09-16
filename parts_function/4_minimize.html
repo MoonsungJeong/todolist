@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<style>
+			#mdiv {
+			    height: 120px;
+			    width: 200px;
+			    margin-top: 20px;
+			    background-color: green;
+			    color: red;
+			    font-size: 20px;
+			    font-weight: bold;
+			    text-align: center;
+			    -webkit-transition: all 1s ease-in-out;
+			    transition: all 1s ease-in-out;
+			    overflow-y: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="mbtn" onclick="slideToggle()">SlideToggle</button>
+		<div id="mdiv">Some context<br>
+			skskfekfekf<br>
+			skskfekfekf<br>
+			skskfekfekf<br>
+			skskfekfekf<br>
+			</div>
+		<script>
+			var slideOpen = true;
+			var heightChecked = false;
+			var initHeight = 0;
+			
+			function slideToggle() {
+			    var mdiv = document.getElementById('mdiv');
+			    if(!heightChecked) {
+			        initHeight = mdiv.offsetHeight;
+			        heightChecked = true;
+			    }
+			    if(slideOpen) {
+			        slideOpen = false;
+			        mdiv.style.height = '0px';
+			    }
+			    else {
+			        slideOpen = true;
+			        mdiv.style.height = initHeight + 'px';
+			    }
+			}
+		</script>
+	</body>
+</html>

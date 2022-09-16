@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="change.css">
+	</head>
+	<body>
+		<div id="dialogbox">
+				<div id="dialogboxbody"></div>
+		</div>
+		<div  id="memo">	
+			<div id="header">
+				<div id="title">
+					Memo1
+				</div>
+				<div id="bar">
+					<div id="minimize">
+						▤
+					</div>
+					<div id="maxmize">
+						□
+					</div>
+					<div id="close">
+						※
+					</div>
+				</div>
+			</div>
+			<div id="body">
+				<ul id="content"><li id="0"><span>Default Prompt</span></li><li id="1"><span>Custome Prompt</span></li><li id="2"><span>Change</span></li></ul>
+			</div>
+		</div>
+	<script>
+		function wrapTag(){
+			this.one = function(){
+				var In_Tag = document.getElementById('0').firstChild;
+				var Out_Tag = document.createElement('del');
+				Out_Tag.innerHTML = In_Tag.outerHTML;
+				In_Tag.parentNode.insertBefore(Out_Tag,In_Tag);
+				In_Tag.remove();
+				In_Tag.removeEventListener('dblclick',wrap.one,false);
+				wrap.bridge();
+			};
+			this.bridge = function(){
+				var dl = document.getElementById("0").firstChild;
+				dl.addEventListener('dblclick',wrap.second,false);
+			};
+			this.second = function(){
+				var Out_Tag = document.getElementById('0');
+				var In_Tag = document.createElement('span');
+				In_Tag.innerText = Out_Tag.innerText;
+				Out_Tag.firstChild.remove();
+				Out_Tag.append(In_Tag);
+				Out_Tag.firstChild.addEventListener('dblclick',wrap.one,false);
+			};
+		}
+		var wrap = new wrapTag();
+		var sp = document.getElementById("0").firstChild;
+		sp.addEventListener('dblclick',wrap.one,false);
+	</script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css" />
+	
+	</head>
+	<body>
+		<div  id="memo" >
+			
+			<div id="header">
+				<div id="title">
+					Memo1
+				</div>
+				<div id="bar" class="normal">
+					<div id="minimize">
+						▤
+					</div>
+					<div id="maxmize">
+						□
+					</div>
+					<div id="close">
+						※
+					</div>
+				</div>
+			</div>
+					
+			<div id="body">
+				<ul id="content"><li id="-1"><input id="txt"  type="text" placeholder="txt" autofocus /></li></ul>
+			</div>
+			
+		</div>
+		
+		
+	<script src="script.js"></script>
+	<script src="script_bar.js"></script>
+	<script>
+		resizable(document.getElementById('txt'),7);
+		//resizable(document.getElementById('modify'),7);
+	</script>
+	
+	</body>
+</html>

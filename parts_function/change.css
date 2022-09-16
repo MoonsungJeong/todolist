@@ -1,0 +1,75 @@
+#dialogbox{
+	display: none;
+	position: fixed;
+	background:#FFF;
+	width:190px;
+	z-index: 10;
+}
+#dialogboxbody{ border: 1px solid green; background:#fff44f; padding:5px; color:#FFF; }
+			
+::-webkit-scrollbar{width: 16px;}
+::-webkit-scrollbar-track {background-color:#f1f1f1;}
+::-webkit-scrollbar-thumb {background-color:#f1ef79;border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover {background: #555;}
+::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+width:16px;height:16px;background:#f1ef79;} 
+
+#memo{
+	position:absolute;
+	left:10px;
+	top: 10px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	width: 350px;
+	height: 350px;
+	background-color: #fff44f ;
+}
+#header{
+	padding:2.85%;
+	border-bottom: 1px solid black;
+}
+#title{
+	display:inline;
+}
+#bar{
+	display: inline;
+	position: relative;
+	left: 64%;
+	bottom: 10px;
+}
+#minimize{
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	display:inline;
+	
+}
+#maxmize{
+	
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	display:inline;
+	
+}
+#close{
+	display:inline;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+#body{
+}
+#txt, #modify{
+	border: none; background: transparent;
+	min-width:50px!important;
+  	max-width:99.99%!important;
+  	transition: width 0.25s;
+  //text-align:center;
+}
+#t1{
+	border: 1px solid red;
+}
+span{
+	font-size:13px;
+}
+
+

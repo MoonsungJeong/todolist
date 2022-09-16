@@ -1,0 +1,73 @@
+::-webkit-scrollbar{width: 16px;}
+::-webkit-scrollbar-track {background-color:#f1f1f1;}
+::-webkit-scrollbar-thumb {background-color:#f1ef79;border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover {background: #555;}
+::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+width:16px;height:16px;background:#f1ef79;} 
+
+#memo{
+	width: 350px;
+	height: 350px;
+	transition: all 0.5s ease-in-out;
+}
+#header{
+	width: 330.01px;
+	height: 21px;
+	padding:10px;
+	background-color: #fff44f ;
+	transition: all 0.5s ease-in-out;
+}
+#title{
+	display:inline;
+}
+#bar{
+	display: inline;
+	position: relative;
+	left: 64%;
+	bottom: 10px;
+	transition: all 0.7s ease-in-out;
+}
+#minimize{
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	display:inline;
+	
+}
+#maxmize{
+	
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	display:inline;
+	
+}
+#close{
+	display:inline;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+#body{
+	width: 350px;
+	height: 308px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	border-top: 1px solid black;
+	background-color: #fff44f ;
+	transition: all 0.5s ease-in-out;
+}
+#txt, #modify{
+	border: none; background: transparent;
+	min-width:50px!important;
+  	max-width:99.99%!important;
+  	transition: width 0.25s;
+  //text-align:center;
+}
+#t1{
+	border: 1px solid red;
+}
+span{
+	font-size:13px;
+}
+
+

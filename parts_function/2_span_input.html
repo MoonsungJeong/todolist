@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="change.css">
+	</head>
+	<body>
+		<div id="dialogbox">
+				<div id="dialogboxbody"></div>
+		</div>
+		<div  id="memo">	
+			<div id="header">
+				<div id="title">
+					Memo1
+				</div>
+				<div id="bar">
+					<div id="minimize">
+						▤
+					</div>
+					<div id="maxmize">
+						□
+					</div>
+					<div id="close">
+						※
+					</div>
+				</div>
+			</div>
+			<div id="body">
+				<ul id="content"><li id="0"><span>Default Prompt</span></li><li id="1"  onclick="Prompt.render('HI','changeText')"><span>Custome Prompt</span></li><li id="2"><span>Change</span></li><li id="3"><input id="test" type="text" value="MS" autofocus></li></ul>
+			</div>
+		</div>
+	
+	<script src="change.js"></script>
+	<script>
+		function changeText(val){
+			document.getElementById('1').innerHTML = "<span>"+val+"</span>";
+		}
+	</script>
+	</body>
+</html>
